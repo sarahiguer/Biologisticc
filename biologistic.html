@@ -1,0 +1,1305 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Biologistic | Logística y Distribución</title>
+
+    <!-- MONTSERRAT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <style>
+
+        /* =========================
+           COLORES DE BIOLOGISTIC
+        ========================= */
+
+        :root {
+
+            --azul-petroleo: #004D4D;
+            --verde-brillante: #32CD32;
+            --verde-oscuro: #228B22;
+
+            --azul-intenso: #2563EB;
+            --verde-claro: #4CCD64;
+
+            --blanco: #FFFFFF;
+            --gris-claro: #F4F8F7;
+            --gris: #647575;
+
+        }
+
+
+        /* =========================
+           GENERAL
+        ========================= */
+
+        * {
+
+            margin: 0;
+            padding: 0;
+
+            box-sizing: border-box;
+
+            scroll-behavior: smooth;
+
+        }
+
+
+        body {
+
+            font-family: 'Montserrat', sans-serif;
+
+            background: var(--gris-claro);
+
+            color: var(--azul-petroleo);
+
+        }
+
+
+        /* =========================
+           HEADER
+        ========================= */
+
+        header {
+
+            position: sticky;
+
+            top: 0;
+
+            z-index: 1000;
+
+            background: white;
+
+            border-bottom: 3px solid var(--verde-brillante);
+
+            padding: 12px 7%;
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+
+        }
+
+
+        .logo {
+
+            width: 120px;
+
+            height: auto;
+
+            display: block;
+
+        }
+
+
+        nav {
+
+            display: flex;
+
+            gap: 25px;
+
+        }
+
+
+        nav a {
+
+            text-decoration: none;
+
+            color: var(--azul-petroleo);
+
+            font-size: 14px;
+
+            font-weight: 700;
+
+            transition: .3s;
+
+        }
+
+
+        nav a:hover {
+
+            color: var(--verde-oscuro);
+
+        }
+
+
+        /* =========================
+           HERO
+        ========================= */
+
+        .hero {
+
+            min-height: 650px;
+
+            padding: 80px 7%;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            text-align: center;
+
+            background:
+
+                linear-gradient(
+                    135deg,
+                    #004D4D,
+                    #075E5E,
+                    #0E7A3B
+                );
+
+        }
+
+
+        .hero-content {
+
+            max-width: 850px;
+
+        }
+
+
+        .hero-logo {
+
+            width: 90px;
+
+            max-width: 60%;
+
+            background: beige;
+
+            padding: 10px;
+
+            border-radius: 12px;
+
+            margin-bottom: 25px;
+
+            box-shadow:
+                0 10px 25px
+                rgba(0,0,0,.20);
+
+        }
+
+
+        .hero h1 {
+
+            color: white;
+
+            font-size: 45px;
+
+            line-height: 1.2;
+
+            margin-bottom: 20px;
+
+        }
+
+
+        .hero h1 span {
+
+            color: var(--verde-brillante);
+
+        }
+
+
+        .hero p {
+
+            color: rgba(255,255,255,.9);
+
+            font-size: 17px;
+
+            max-width: 700px;
+
+            margin: auto;
+
+            margin-bottom: 30px;
+
+        }
+
+
+        .boton {
+
+            display: inline-block;
+
+            background: var(--verde-brillante);
+
+            color: var(--azul-petroleo);
+
+            padding: 14px 28px;
+
+            border-radius: 30px;
+
+            text-decoration: none;
+
+            font-weight: 700;
+
+            transition: .3s;
+
+        }
+
+
+        .boton:hover {
+
+            background: white;
+
+            transform: translateY(-3px);
+
+        }
+
+
+        /* =========================
+           SECCIONES
+        ========================= */
+
+        section {
+
+            padding: 80px 7%;
+
+        }
+
+
+        .titulo {
+
+            text-align: center;
+
+            max-width: 700px;
+
+            margin: 0 auto 50px;
+
+        }
+
+
+        .titulo h2 {
+
+            font-size: 35px;
+
+            margin-bottom: 10px;
+
+            color: var(--azul-petroleo);
+
+        }
+
+
+        .titulo h2 span {
+
+            color: var(--verde-oscuro);
+
+        }
+
+
+        .titulo p {
+
+            color: var(--gris);
+
+        }
+
+
+        /* =========================
+           NOSOTROS
+        ========================= */
+
+        .about {
+
+            max-width: 1100px;
+
+            margin: auto;
+
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 50px;
+
+            align-items: center;
+
+        }
+
+
+        .about h3 {
+
+            color: var(--verde-oscuro);
+
+            font-size: 27px;
+
+            margin-bottom: 15px;
+
+        }
+
+
+        .about p {
+
+            color: var(--gris);
+
+            margin-bottom: 15px;
+
+        }
+
+
+        .about-box {
+
+            background: white;
+
+            padding: 40px;
+
+            border-radius: 25px;
+
+            border-left: 6px solid var(--verde-brillante);
+
+            box-shadow: 0 10px 30px rgba(0,0,0,.08);
+
+        }
+
+
+        /* =========================
+           SERVICIOS
+        ========================= */
+
+        #servicios {
+
+            background: white;
+
+        }
+
+
+        .servicios {
+
+            max-width: 1200px;
+
+            margin: auto;
+
+            display: grid;
+
+            grid-template-columns: repeat(4, 1fr);
+
+            gap: 20px;
+
+        }
+
+
+        .servicio {
+
+            background: var(--gris-claro);
+
+            padding: 25px 20px;
+
+            text-align: center;
+
+            border-radius: 20px;
+
+            border: 1px solid #DDEAE7;
+
+            transition: .3s;
+
+        }
+
+
+        .servicio:hover {
+
+            transform: translateY(-8px);
+
+            border-color: var(--verde-brillante);
+
+            box-shadow: 0 10px 30px rgba(0,77,77,.10);
+
+        }
+
+
+        .servicio img {
+
+            width: 75px;
+
+            height: 75px;
+
+            object-fit: contain;
+
+            margin-bottom: 15px;
+
+        }
+
+
+        .servicio h3 {
+
+            font-size: 17px;
+
+            color: var(--azul-petroleo);
+
+            margin-bottom: 10px;
+
+        }
+
+
+        .servicio p {
+
+            font-size: 13px;
+
+            color: var(--gris);
+
+        }
+
+
+        /* =========================
+           MISIÓN / VISIÓN
+        ========================= */
+
+        .identidad {
+
+            background: var(--azul-petroleo);
+
+        }
+
+
+        .identidad .titulo h2 {
+
+            color: white;
+
+        }
+
+
+        .identidad .titulo p {
+
+            color: #C4D9D9;
+
+        }
+
+
+        .mision-vision {
+
+            max-width: 1050px;
+
+            margin: auto;
+
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 30px;
+
+        }
+
+
+        .mv {
+
+            background: white;
+
+            padding: 40px;
+
+            border-radius: 20px;
+
+        }
+
+
+        .mv h3 {
+
+            color: var(--azul-petroleo);
+
+            font-size: 25px;
+
+            margin-bottom: 15px;
+
+        }
+
+
+        .mv p {
+
+            color: var(--gris);
+
+        }
+
+
+        /* =========================
+           MEDIO AMBIENTE
+        ========================= */
+
+        .eco {
+
+            text-align: center;
+
+            background: #E7F8EA;
+
+        }
+
+
+        .eco h2 {
+
+            color: var(--verde-oscuro);
+
+            font-size: 32px;
+
+            margin-bottom: 15px;
+
+        }
+
+
+        .eco p {
+
+            max-width: 800px;
+
+            margin: auto;
+
+            color: var(--gris);
+
+        }
+
+
+        /* =========================
+           CONTACTO
+        ========================= */
+
+        .contacto {
+
+            text-align: center;
+
+        }
+
+
+        .contactos {
+
+            max-width: 900px;
+
+            margin: 30px auto;
+
+            display: grid;
+
+            grid-template-columns: repeat(3,1fr);
+
+            gap: 20px;
+
+        }
+
+
+        .contacto-card {
+
+            background: white;
+
+            padding: 25px;
+
+            border-radius: 18px;
+
+            box-shadow: 0 8px 25px rgba(0,0,0,.06);
+
+        }
+
+
+        .contacto-card strong {
+
+            display: block;
+
+            color: var(--verde-oscuro);
+
+            margin-bottom: 8px;
+
+        }
+
+
+        .contacto-card span {
+
+            color: var(--gris);
+
+            font-size: 14px;
+
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+
+            background: var(--azul-petroleo);
+
+            color: white;
+
+            text-align: center;
+
+            padding: 35px 20px;
+
+        }
+
+
+        footer img {
+
+            width: 160px;
+
+            background: white;
+
+            padding: 8px;
+
+            border-radius: 10px;
+
+            margin-bottom: 15px;
+
+        }
+
+
+        footer p {
+
+            font-size: 13px;
+
+            color: #C4D9D9;
+
+        }
+
+
+        /* =========================
+           RESPONSIVE
+        ========================= */
+
+        @media(max-width: 900px) {
+
+            .servicios {
+
+                grid-template-columns: repeat(2,1fr);
+
+            }
+
+        }
+
+
+        @media(max-width: 700px) {
+
+            header {
+
+                flex-direction: column;
+
+                gap: 15px;
+
+            }
+
+
+            .logo {
+
+                width: 160px;
+
+            }
+
+
+            nav {
+
+                flex-wrap: wrap;
+
+                justify-content: center;
+
+                gap: 12px;
+
+            }
+
+
+            .hero {
+
+                min-height: 600px;
+
+                padding: 60px 20px;
+
+            }
+
+
+            .hero-logo {
+
+                width: 250px;
+
+            }
+
+
+            .hero h1 {
+
+                font-size: 34px;
+
+            }
+
+
+            .about {
+
+                grid-template-columns: 1fr;
+
+            }
+
+
+            .servicios {
+
+                grid-template-columns: 1fr;
+
+            }
+
+
+            .mision-vision {
+
+                grid-template-columns: 1fr;
+
+            }
+
+
+            .contactos {
+
+                grid-template-columns: 1fr;
+
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- ==========================================
+         HEADER
+    ========================================== -->
+
+    <header>
+
+        <a href="#inicio">
+
+            <!-- LOGO -->
+            <img src="index.html/logo-biologistic.jpg"
+                 alt="Logo Biologistic"
+                 class="logo" >
+
+        </a>
+
+
+        <nav>
+
+            <a href="#inicio">Inicio</a>
+
+            <a href="#nosotros">Nosotros</a>
+
+            <a href="#servicios">Servicios</a>
+
+            <a href="#mision">Misión</a>
+
+            <a href="#contacto">Contacto</a>
+
+        </nav>
+
+    </header>
+
+
+
+    <!-- ==========================================
+         PORTADA
+    ========================================== -->
+
+    <section class="hero" id="inicio">
+
+        <div class="hero-content">
+
+
+            <!-- LOGO PRINCIPAL -->
+
+            <img src="index.html/logo-biologistic2.jpeg"
+                 alt="Biologistic"
+                 class="hero-logo">
+
+
+            <h1>
+
+                Movemos tus ideas,
+                <span>conectamos soluciones.</span>
+
+            </h1>
+
+
+            <p>
+
+                Centro de distribución y operaciones
+                logísticas. Trabajamos para ofrecer
+                soluciones eficientes, innovadoras
+                y responsables.
+
+            </p>
+
+
+            <a href="#servicios"
+               class="boton">
+
+                Conoce nuestros servicios
+
+            </a>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ==========================================
+         NOSOTROS
+    ========================================== -->
+
+    <section id="nosotros">
+
+        <div class="titulo">
+
+            <h2>
+
+                Sobre
+                <span>Biologistic</span>
+
+            </h2>
+
+            <p>
+
+                Una empresa enfocada en logística,
+                distribución e innovación.
+
+            </p>
+
+        </div>
+
+
+        <div class="about">
+
+
+            <div>
+
+                <h3>
+
+                    Soluciones que conectan
+
+                </h3>
+
+
+                <p>
+
+                    Biologistic es una empresa enfocada
+                    en el área de la logística y
+                    distribución.
+
+                </p>
+
+
+                <p>
+
+                    Nuestro propósito es satisfacer a
+                    nuestros clientes mediante un buen
+                    trabajo, buenos productos, buenos
+                    precios y excelente atención.
+
+                </p>
+
+
+                <p>
+
+                    Buscamos además crear propuestas
+                    llamativas e innovadoras que
+                    permitan diferenciarnos.
+
+                </p>
+
+            </div>
+
+
+            <div class="about-box">
+
+                <h3>
+
+                    ¿Por qué Biologistic?
+
+                </h3>
+
+
+                <p>
+
+                    Porque creemos que la logística no
+                    solamente consiste en transportar
+                    productos. También significa conectar
+                    personas, negocios y oportunidades.
+
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ==========================================
+         SERVICIOS
+    ========================================== -->
+
+    <section id="servicios">
+
+        <div class="titulo">
+
+            <h2>
+
+                Nuestros
+                <span>servicios</span>
+
+            </h2>
+
+            <p>
+
+                Los pilares de nuestra identidad.
+
+            </p>
+
+        </div>
+
+
+        <div class="servicios">
+
+
+            <!-- RUTAS -->
+
+            <div class="servicio">
+
+                <img src="index.html/ubicacion.jpg"
+                     alt="Rutas y distribución">
+
+                <h3>
+
+                    Rutas y distribución
+
+                </h3>
+
+                <p>
+
+                    Organización y distribución
+                    eficiente de productos.
+
+                </p>
+
+            </div>
+
+
+
+            <!-- TRANSPORTE -->
+
+            <div class="servicio">
+
+                <img src="index.html/transporte.jpg"
+                     alt="Transporte y logística">
+
+                <h3>
+
+                    Transporte y logística
+
+                </h3>
+
+                <p>
+
+                    Procesos logísticos organizados
+                    y responsables.
+
+                </p>
+
+            </div>
+
+
+
+            <!-- ATENCIÓN -->
+
+            <div class="servicio">
+
+               <img src="index.html/imagen.jpg"
+                    alt="atencion al cliente">
+
+                <h3>
+
+                    Atención al cliente
+
+                </h3>
+
+                <p>
+
+                    Atención cercana para generar
+                    confianza y seguridad.
+
+                </p>
+
+            </div>
+
+
+
+            <!-- COMUNICACIÓN -->
+
+            <div class="servicio">
+
+                <img src="index.html/mensaje.jpeg"
+                     alt="Comunicación">
+
+                <h3>
+
+                    Comunicación
+
+                </h3>
+
+                <p>
+
+                    Comunicación clara con
+                    nuestros clientes.
+
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ==========================================
+         MISIÓN Y VISIÓN
+    ========================================== -->
+
+    <section class="identidad" id="mision">
+
+        <div class="titulo">
+
+            <h2>
+
+                Nuestra
+                <span>identidad</span>
+
+            </h2>
+
+            <p>
+
+                Lo que queremos construir.
+
+            </p>
+
+        </div>
+
+
+        <div class="mision-vision">
+
+
+            <div class="mv">
+
+                <h3>
+
+                    🎯 Misión
+
+                </h3>
+
+
+                <p>
+
+                    Satisfacer a nuestros clientes
+                    mediante un buen trabajo, buenos
+                    productos, precios competitivos
+                    y excelente atención, ofreciendo
+                    soluciones logísticas responsables
+                    y eficientes.
+
+                </p>
+
+            </div>
+
+
+
+            <div class="mv">
+
+                <h3>
+
+                    🚀 Visión
+
+                </h3>
+
+
+                <p>
+
+                    Convertirnos en un proyecto
+                    reconocido por la calidad de
+                    nuestros productos, la innovación,
+                    el buen servicio y el compromiso
+                    con nuestros clientes y el
+                    medio ambiente.
+
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ==========================================
+         MEDIO AMBIENTE
+    ========================================== -->
+
+    <section class="eco">
+
+        <h2>
+
+            🌱 Comprometidos con el medio ambiente
+
+        </h2>
+
+
+        <p>
+
+            En Biologistic buscamos desarrollar
+            nuestras actividades de manera responsable
+            y promover alternativas que contribuyan
+            al cuidado del medio ambiente.
+
+        </p>
+
+    </section>
+
+
+
+    <!-- ==========================================
+         CONTACTO
+    ========================================== -->
+
+    <section class="contacto" id="contacto">
+
+        <div class="titulo">
+
+            <h2>
+
+                <span>Contáctanos</span>
+
+            </h2>
+
+            <p>
+
+                Estamos para atenderte.
+
+            </p>
+
+        </div>
+
+
+        <div class="contactos">
+
+
+            <div class="contacto-card">
+
+                <strong>
+
+                    📱 Teléfono
+
+                </strong>
+
+                <span>
+
+                    301 4212899
+
+                </span>
+
+            </div>
+
+
+
+            <div class="contacto-card">
+
+                <strong>
+
+                    📧 Correo
+
+                </strong>
+
+                <span>
+
+                    Biologistic2025@gmail.com
+
+                </span>
+
+            </div>
+
+
+
+            <div class="contacto-card">
+
+                <strong>
+
+                    📍 Ubicación
+
+                </strong>
+
+                <span>
+
+                    Bogotá, Colombia
+
+                </span>
+
+            </div>
+
+
+        </div>
+
+
+        <a href="https://wa.me/573014212899"
+           target="_blank"
+           class="boton">
+
+            💬 Escríbenos por WhatsApp
+
+        </a>
+
+    </section>
+
+
+
+    <!-- ==========================================
+         FOOTER
+    ========================================== -->
+
+    <footer>
+
+        <img src="index.html/logo-biologistic.jpg"
+             alt="Biologistic">
+
+
+        <p>
+
+            Centro de distribución y operaciones
+            logísticas.
+
+        </p>
+
+
+        <br>
+
+
+        <p>
+
+            © 2026
+
+            <strong>
+
+                Biologistic
+
+            </strong>
+
+            — Todos los derechos reservados.
+
+        </p>
+
+    </footer>
+
+
+</body>
+
+</html>
